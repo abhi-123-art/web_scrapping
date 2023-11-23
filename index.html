@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game of thrones data scraping</title>
+
+</head>
+<body>
+
+    <h1 align="center">winter is coming</h1>
+    {% if output %}
+        <table>
+            <tr>
+                <th>FullName</th>
+                <th>Title</th>
+                <th>Family</th>
+                <th>photo</th>
+            </tr>
+            {% for character in output %}
+                <tr>
+                    <td>{{character.firstName}}</td>
+                    <td>{{character.title}}</td>
+                    <td>{{character.family}}</td>
+                    <td>{{character. imageUrl}}</td>
+                </tr>
+            {% endfor %}
+            {% endif %}
+
+        </table>
+
+</body>
+</html>
